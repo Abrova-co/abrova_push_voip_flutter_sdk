@@ -1,0 +1,27 @@
+name: abrova_push_voip
+description: VoIP call handling add-on for AbrovaPush push notifications. Shows native incoming call UI on Android (CallStyle) and iOS (CallKit).
+version: 0.1.2
+homepage: https://abrova.ir/cloud/abrova-push
+repository: https://github.com/Abrova-co/abrova_push_voip_flutter_sdk
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: ir.abrova.push.voip.flutter
+        pluginClass: AbrovaPushVoipPlugin
+      ios:
+        pluginClass: AbrovaPushVoipPlugin
