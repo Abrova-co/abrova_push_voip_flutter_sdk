@@ -23,19 +23,21 @@ The package is published on [Abrova Center](https://center.abrova.ir). Add to yo
 dependencies:
   abrova_push:
     hosted: https://center.abrova.ir/api/packages/abrova/pub
-    version: ^0.1.24
+    version: ^0.1.26
   abrova_push_voip:
     hosted: https://center.abrova.ir/api/packages/abrova/pub
-    version: ^0.1.2
+    version: ^0.1.3
 ```
 
-On iOS the plugins use the native Abrova Push SDKs from Abrova Center. Add these lines to the `Runner` target in `ios/Podfile`:
+iOS and Android need no other setup: the plugins bring the native SDKs from Abrova Center themselves.
+
+If your app uses CocoaPods instead of Swift Package Manager, add these two lines at the top of `ios/Podfile`:
 
 ```ruby
-pod 'PNProtocol', :git => 'https://center.abrova.ir/abrova/pn-protocol-ios.git', :tag => '0.2.2'
-pod 'AbrovaPushSDK', :git => 'https://center.abrova.ir/abrova/abrova-push-ios-sdk.git', :tag => '0.1.19'
-pod 'AbrovaPushVoip', :git => 'https://center.abrova.ir/abrova/abrova-push-voip-ios-sdk.git', :tag => '0.1.2'
+source 'https://center.abrova.ir/abrova/specs.git'
+source 'https://cdn.cocoapods.org/'
 ```
+
 
 ## Usage
 

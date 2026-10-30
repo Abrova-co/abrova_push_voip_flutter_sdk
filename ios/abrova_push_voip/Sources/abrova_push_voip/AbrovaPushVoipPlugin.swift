@@ -36,7 +36,7 @@ public class AbrovaPushVoipPlugin: NSObject, FlutterPlugin {
     /// SDK identity sent with the VoIP token registration.
     /// Keep `sdkVersion` in sync with pubspec.yaml and abrova_push_voip.podspec.
     static let sdkName = "flutter-voip"
-    static let sdkVersion = "0.1.2"
+    static let sdkVersion = "0.1.3"
 
     public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "ir.abrova.push/voip", binaryMessenger: registrar.messenger())
